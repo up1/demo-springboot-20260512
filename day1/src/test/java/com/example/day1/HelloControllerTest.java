@@ -25,4 +25,12 @@ class HelloControllerTest {
         // Assert
         assertEquals("Hello spring boot + graalvm", result);
     }
+
+    @Test
+    void test02() {
+        // Act
+        String result = restTemplate.getForObject("/report", String.class);
+        // Assert
+        assertEquals("Report V2", result);
+    }
 }
