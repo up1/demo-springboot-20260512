@@ -1,5 +1,8 @@
 package com.example.day1.dip;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class GenerateIdService {
     MyRandom random;
 

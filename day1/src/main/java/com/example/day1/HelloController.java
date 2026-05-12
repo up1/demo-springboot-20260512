@@ -1,7 +1,7 @@
 package com.example.day1;
 
+import com.example.day1.dip.GenerateIdService;
 import com.example.day1.report.Report;
-import com.example.day1.report.ReportV1;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,6 +11,15 @@ public class HelloController {
 
     @Autowired
     private Report reportV2;
+
+    @Autowired
+    private GenerateIdService generateIdService;
+
+
+    @GetMapping("/random")
+    public String random(){
+        return generateIdService.process();
+    }
 
     @GetMapping("/report")
     public String getReport(){

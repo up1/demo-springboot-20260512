@@ -33,4 +33,12 @@ class HelloControllerTest {
         // Assert
         assertEquals("Report V2", result);
     }
+
+    @Test
+    void test03() {
+        // Act
+        String result = restTemplate.getForObject("/random", String.class);
+        // Assert
+        assertEquals("DEMO-5", result);
+    }
 }
