@@ -11,4 +11,14 @@ public class HelloController {
         return "Hello spring boot + graalvm";
     }
 
+    @GetMapping("/slow")
+    public String slow(){
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        return "Hello spring boot + graalvm";
+    }
+
 }
