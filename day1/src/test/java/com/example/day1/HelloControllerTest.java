@@ -1,5 +1,6 @@
 package com.example.day1;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.resttestclient.TestRestTemplate;
@@ -17,7 +18,8 @@ class HelloControllerTest {
     private TestRestTemplate restTemplate;
 
     @Test
-    void sayHi() {
+    @DisplayName("ทำการทดสอบเรื่องอะไร ด้วย input อะไร และต้องได้ผลอะไรบ้าง ?")
+    void test01() {
         // Act
         String result = restTemplate.getForObject("/hello", String.class);
         // Assert
